@@ -41,15 +41,8 @@ body {
 }
 
 div#bookSection > div:nth-of-type(odd) {
-  background-color: #dddddd;
+  background-color: #ddd;
 }
-
-/* .formInput{
-	display: flex;
-	width: 30%;
-	display: flex;
-	justify-content: center;
-} */
 
 input {
   border: 2px #111010 solid;

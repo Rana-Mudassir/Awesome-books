@@ -6,9 +6,9 @@ const add = document.querySelector('#add');
 const listNav = document.querySelector('.listNav');
 const addNew = document.querySelector('.add-new');
 const contactUS = document.querySelector('.contact');
-const allBooks = document.querySelector('.bookSection1');
-const addBooks = document.querySelector('.addSection');
-const contactBooks = document.querySelector('.contact1');
+const displayBooks = document.querySelector('.bookSection1');
+const addBook = document.querySelector('.addSection');
+const contactBook = document.querySelector('.contact1');
 
 let booksArray = [];
 
@@ -53,9 +53,9 @@ window.onload = () => {
     booksArray = JSON.parse(localStorage.getItem('booksArray'));
   }
   bookApp.displayBook();
-  allBooks.classList.add('show');
-  addBooks.classList.add('hide');
-  contactBooks.classList.add('hide');
+  displayBooks.classList.add('show');
+  addBook.classList.add('hide');
+  contactBook.classList.add('hide');
 };
 
 if (add) {
@@ -65,19 +65,19 @@ if (add) {
 // Navigation
 
 listNav.addEventListener('click', () => {
-  allBooks.classList.replace('hide', 'show');
-  addBooks.classList.replace('show', 'hide');
-  contactBooks.classList.replace('show', 'hide');
+  displayBooks.classList.replace('hide', 'show');
+  addBook.classList.replace('show', 'hide');
+  contactBook.classList.replace('show', 'hide');
 });
 
 addNew.addEventListener('click', () => {
-  addBooks.classList.replace('hide', 'show');
-  allBooks.classList.replace('show', 'hide');
-  contactBooks.classList.replace('show', 'hide');
+  addBook.classList.replace('hide', 'show');
+  displayBooks.classList.replace('show', 'hide');
+  contactBook.classList.replace('show', 'hide');
 });
 
 contactUS.addEventListener('click', () => {
-  contactBooks.classList.replace('hide', 'show');
-  allBooks.classList.replace('show', 'hide');
-  addBooks.classList.replace('show', 'hide');
+  contactBook.classList.replace('hide', 'show');
+  displayBooks.classList.replace('show', 'hide');
+  addBook.classList.replace('show', 'hide');
 });
