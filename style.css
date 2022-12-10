@@ -2,11 +2,10 @@
   padding: 0;
   box-sizing: border-box;
   margin: 0;
-  font-family: "Heebo", sans-serif;
+  font-family: 'Heebo', sans-serif;
 }
 
 body {
-  
   flex-direction: column;
   justify-content: space-between;
   display: flex;
@@ -18,12 +17,12 @@ body {
   text-align: center;
 }
 
-#bookSection{
-	border: 2px solid;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
+#bookSection {
+  border: 2px solid;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 52%;
 }
 
 #title {
@@ -40,8 +39,8 @@ body {
 #textHeading {
   padding: 5px 8px;
   background-color: #fff;
-	display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 div#bookSection > div:nth-of-type(odd) {
@@ -62,7 +61,7 @@ div#bookSection > div:nth-of-type(odd) {
 
 #add {
   padding: 4px 32px;
-	margin-left: 132px;
-	margin-top: 10px;
-	border: 2px solid;
+  margin-left: 132px;
+  margin-top: 10px;
+  border: 2px solid;
 }
