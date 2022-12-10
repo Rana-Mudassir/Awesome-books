@@ -5,61 +5,28 @@ const authorBook = document.getElementById('title');
 const add = document.querySelector('#add');
 
 let booksArray = [];
-
-class book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
+function addBook() {
+	const inputTitle = document.getElementById('inputTitle');
+	const inputAuthor = document.getElementById('inputAuthor');
+	var title = inputTitle.value;
+	var author = inputAuthor.value;
+	
+	booksArray.push({
+		id: Date.now(),
+		title: title,
+		author: author
+	})
+	console.log('booksArray', booksArray)
+	displayBooksList()
 }
 
-class bookApp {
-	static addBook() {
-		const inputTitle = document.getElementById('inputTitle');
-		const inputAuthor = document.getElementById('inputAuthor');
-		var title = inputTitle.value;
-		var author = inputAuthor.value;
-		
-		booksArray.push({
-			id: Date.now(),
-			title: title,
-			author: author
-		})
-		console.log('booksArray', booksArray)
-		displayBooksList()
-	}
-
-	static addBook() {
-		const inputTitle = document.getElementById('inputTitle');
-		const inputAuthor = document.getElementById('inputAuthor');
-		var title = inputTitle.value;
-		var author = inputAuthor.value;
-		
-		booksArray.push({
-			id: Date.now(),
-			title: title,
-			author: author
-		})
-		console.log('booksArray', booksArray)
-		displayBooksList()
-	}
-
-	static displayBooksList() {	
-		const section = document.getElementById('bookSection');
-		section.innerHTML = '';
-		for (let i = 0; i <= booksArray.length - 1; i++) {
-			section.innerHTML += `<div id="textHeading"><div><p id="title">"${booksArray[i].title}" By  </p>	<p id="author">${booksArray[i].author}</p></div>	<button id="remove" onclick="removeBook(${booksArray[i].id})">Remove</button></div>`;
-		}
-	}
-
-	if (add) {
-		add.addEventListener('click', addBook)
+function displayBooksList() {	
+	const section = document.getElementById('bookSection');
+	section.innerHTML = '';
+	for (let i = 0; i <= booksArray.length - 1; i++) {
+		section.innerHTML += `<div id="textHeading"><div><p id="title">"${booksArray[i].title}" By  </p>	<p id="author">${booksArray[i].author}</p></div>	<button id="remove" onclick="removeBook(${booksArray[i].id})">Remove</button></div>`;
 	}
 }
-
-
-
-
 
 function removeBook(id) {
 	console.log('array 1', booksArray)
@@ -68,7 +35,9 @@ function removeBook(id) {
 	displayBooksList();
 }
 
-
+if (add) {
+	add.addEventListener('click', addBook)
+}
 
 // Local Storage
 
