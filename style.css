@@ -33,9 +33,6 @@ body {
   display: contents;
 }
 
-#remove {
-}
-
 #textHeading {
   padding: 5px 8px;
   background-color: #fff;
@@ -44,7 +41,7 @@ body {
 }
 
 div#bookSection > div:nth-of-type(odd) {
-  background-color: #dddddd;
+  background-color: #ddd;
 }
 
 /* .formInput{
