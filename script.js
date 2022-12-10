@@ -21,16 +21,7 @@ function addBook() {
 	displayBooksList()
 }
 
-function displayBooksList() {
-	
-	const section = document.getElementById('bookSection');
-	section.innerHTML = '';
-	for (let i = 0; i <= booksArray.length - 1; i++) {
-		section.innerHTML += `<p id="title">${booksArray[i].title}</p>	<p id="author">${booksArray[i].author}</p>	<button id="remove" onclick="removeBook(${booksArray[i].id})">Remove</button>
-		<hr />`;
-	}
-}
-
+// Display Function
 
 
 function removeBook(id) {
