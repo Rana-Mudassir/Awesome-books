@@ -25,4 +25,25 @@ class bookApp {
 }
 
 // Local Storage
+window.onload = () => {
+  if (localStorage.getItem('booksArray')) {
+		booksArray = JSON.parse(localStorage.getItem('booksArray'));
+  }
+	bookApp.addBook();
+};
 
+if (add) {
+  add.addEventListener('click', () => {
+    const title = document.getElementById('inputTitle');
+    const author = document.getElementById('inputAuthor');
+    const newBook = {
+      title: title.value,
+      author: author.value,
+    };
+    booksArray.push(newBook);
+    bookApp.addBook();
+    localStorage.setItem('booksArray', JSON.stringify(booksArray));
+    title.value = '';
+    author.value = '';
+  });
+}
