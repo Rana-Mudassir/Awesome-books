@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 100vh;
+}
+
+#heading {
+  text-align: center;
+}
+
+#bookSection{
+	border: 2px solid;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+#title {
+  display: inline;
+}
+
+#author {
+  display: contents;
+}
+
+#remove {
+}
+
+#textHeading {
+  padding: 5px 8px;
+  background-color: #fff;
+	display: flex;
+    justify-content: space-between;
+}
+
+div#bookSection > div:nth-of-type(odd) {
+  background-color: #dddddd;
+}
+
+/* .formInput{
+	display: flex;
+	width: 30%;
+	display: flex;
+	justify-content: center;
+} */
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+#add {
+  padding: 4px 32px;
+	margin-left: 132px;
+	margin-top: 10px;
+	border: 2px solid;
+}

@@ -21,17 +21,13 @@ function addBook() {
 	displayBooksList()
 }
 
-function displayBooksList() {
-	
+function displayBooksList() {	
 	const section = document.getElementById('bookSection');
 	section.innerHTML = '';
 	for (let i = 0; i <= booksArray.length - 1; i++) {
-		section.innerHTML += `<p id="title">${booksArray[i].title}</p>	<p id="author">${booksArray[i].author}</p>	<button id="remove" onclick="removeBook(${booksArray[i].id})">Remove</button>
-		<hr />`;
+		section.innerHTML += `<div id="textHeading"><div><p id="title">"${booksArray[i].title}" By  </p>	<p id="author">${booksArray[i].author}</p></div>	<button id="remove" onclick="removeBook(${booksArray[i].id})">Remove</button></div>`;
 	}
 }
-
-
 
 function removeBook(id) {
 	console.log('array 1', booksArray)
@@ -44,3 +40,30 @@ if (add) {
 	add.addEventListener('click', addBook)
 }
 
+// Local Storage
+
+const title = document.getElementById('inputTitle');
+const author = document.getElementById('inputAuthor');
+
+function getFormInfo() {
+  const formData = {
+    title: title.value,
+    author: author.value,
+  };
+  localStorage.setItem('formData', JSON.stringify(formData));
+}
+
+function storeData() {
+  if (!localStorage.getItem('formData')) {
+    getFormInfo();
+  } else {
+    const fetchData = JSON.parse(localStorage.getItem('formData'));
+    title.setAttribute('value', fetchData.title);
+    author.setAttribute('value', fetchData.author);
+  }
+}
+window.onload = () => {
+  storeData();
+};
+title.addEventListener('change', getFormInfo);
+author.addEventListener('change', getFormInfo);
