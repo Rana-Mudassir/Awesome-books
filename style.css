@@ -6,7 +6,6 @@
 }
 
 body {
-  
   flex-direction: column;
   justify-content: space-between;
   display: flex;
@@ -18,12 +17,12 @@ body {
   text-align: center;
 }
 
-#bookSection{
-	border: 2px solid;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
+#bookSection {
+  border: 2px solid;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
 }
 
 #title {
@@ -34,14 +33,11 @@ body {
   display: contents;
 }
 
-#remove {
-}
-
 #textHeading {
   padding: 5px 8px;
   background-color: #fff;
-	display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 div#bookSection > div:nth-of-type(odd) {
@@ -55,6 +51,17 @@ div#bookSection > div:nth-of-type(odd) {
 	justify-content: center;
 } */
 
+input {
+  border: 2px #111010 solid;
+  padding: 5px;
+}
+
+::placeholder {
+  color: #111010;
+  font-weight: 600;
+  
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -62,7 +69,86 @@ div#bookSection > div:nth-of-type(odd) {
 
 #add {
   padding: 4px 32px;
-	margin-left: 132px;
-	margin-top: 10px;
-	border: 2px solid;
+  margin-left: 132px;
+  margin-top: 10px;
+  border: 2px solid;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #000;
+  background-color: #fff;
+  padding: 0.4rem 1rem;
+  position: fixed;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.12rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-bar a {
+  color: black;
+  text-decoration: none;
+  border-right: 2px solid black;
+  padding-right: 0.5rem;
+  font-weight: bold;
+}
+
+.nav-bar a:nth-last-child(1) {
+  border-right: none;
+  padding-right: 0;
+}
+
+.nav-bar a:hover {
+  color: rgb(75, 75, 231);
+}
+
+a.green {
+  color: #25cc25;
+}
+
+/* contact section  */
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem;
+  gap: 2rem;
+}
+
+#contact ul {
+  max-width: 90%;
+}
+
+.contact-text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* footer  */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  border: 2px solid #131212;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+footer p {
+  font-weight: 700;
 }
