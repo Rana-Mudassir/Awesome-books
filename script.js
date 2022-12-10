@@ -1,7 +1,14 @@
+/* eslint-disable max-classes-per-file */
 /* eslint-disable */
 const remove = document.getElementById('remove');
 /* eslint-enable  */
 const add = document.querySelector('#add');
+const listNav = document.querySelector('.listNav');
+const addNew = document.querySelector('.add-new');
+const contactUS = document.querySelector('.contact');
+const allBooks = document.querySelector('.bookSection1');
+const addBooks = document.querySelector('.addSection');
+const contactBooks = document.querySelector('.contact1');
 
 let booksArray = [];
 
@@ -25,7 +32,6 @@ class bookApp {
     localStorage.setItem('booksArray', JSON.stringify(booksArray));
     title.value = '';
     author.value = '';
-    // debugger;
   }
 
   static displayBook() {
@@ -47,8 +53,31 @@ window.onload = () => {
     booksArray = JSON.parse(localStorage.getItem('booksArray'));
   }
   bookApp.displayBook();
+  allBooks.classList.add('show');
+  addBooks.classList.add('hide');
+  contactBooks.classList.add('hide');
 };
 
 if (add) {
   add.addEventListener('click', bookApp.addBook);
 }
+
+// Navigation
+
+listNav.addEventListener('click', () => {
+  allBooks.classList.replace('hide', 'show');
+  addBooks.classList.replace('show', 'hide');
+  contactBooks.classList.replace('show', 'hide');
+});
+
+addNew.addEventListener('click', () => {
+  addBooks.classList.replace('hide', 'show');
+  allBooks.classList.replace('show', 'hide');
+  contactBooks.classList.replace('show', 'hide');
+});
+
+contactUS.addEventListener('click', () => {
+  contactBooks.classList.replace('hide', 'show');
+  allBooks.classList.replace('show', 'hide');
+  addBooks.classList.replace('show', 'hide');
+});

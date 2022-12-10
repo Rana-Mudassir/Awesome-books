@@ -2,7 +2,7 @@
   padding: 0;
   box-sizing: border-box;
   margin: 0;
-  font-family: "Heebo", sans-serif;
+  font-family: 'Heebo', sans-serif;
 }
 
 body {
@@ -59,7 +59,6 @@ input {
 ::placeholder {
   color: #111010;
   font-weight: 600;
-  
 }
 
 .form {
@@ -151,4 +150,8 @@ footer {
 
 footer p {
   font-weight: 700;
+}
+
+.hide {
+  display: none !important;
 }

@@ -12,20 +12,22 @@
     <header>
       <h1>Awesome Books</h1>
       <nav class="nav-bar">
-        <a href="#" class="list green">List</a>
-        <a href="#" class="add-new">Add new</a>
-        <a href="#" class="contact">Contact</a>
+        <a id="listNav" href="#" class="list green listNav">List</a>
+        <a id="addNew" href="#" class="add-new">Add new</a>
+        <a id="contactUS" href="#" class="contact">Contact</a>
       </nav>
     </header>
     <div style="margin-top: 60px;">
       <h1 id="heading">All awesome Books</h1>
     </div>
-    <div id="bookSection"></div>
-    <div>
-      <hr style="margin-bottom: 16px; border: 1px solid black; color: black" />
-      <h3 id="heading">Add a new book</h3>
-    </div>
-    <div>
+    <div class="bookSection1" id="bookSection"></div>
+    <div class="addSection">
+      <div>
+        <hr
+          style="margin-bottom: 16px; border: 1px solid black; color: black;"
+        />
+        <h3 id="heading">Add a new book</h3>
+      </div>
       <form action="" class="form">
         <div class="formInput">
           <input
@@ -33,7 +35,7 @@
             placeholder="Title"
             id="inputTitle"
             value="Old history"
-            style="width: 100%; margin-top: 10px"
+            style="width: 100%; margin-top: 10px;"
           />
         </div>
         <div class="formInput">
@@ -42,7 +44,7 @@
             placeholder="Author"
             id="inputAuthor"
             value="Mudassir"
-            style="width: 100%; margin-top: 10px"
+            style="width: 100%; margin-top: 10px;"
           />
         </div>
         <div>
@@ -52,16 +54,19 @@
       </form>
     </div>
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="contact1">
       <h2>Contact information</h2>
       <p class="contact-text">
-        Do you have any questions or you just want to say "Hello"? <br />
+        Do you have any questions or you just want to say "Hello"?
+        <br />
         You can reach out to us!
       </p>
       <ul>
         <li class="contact-text">Our e-mail: sjoya66@gmail.com</li>
         <li class="contact-text">Our phone number: +93787089703</li>
-        <li class="contact-text">Our address: Barchi, 13th District, Kabul, Afghanistan</li>
+        <li class="contact-text">
+          Our address: Barchi, 13th District, Kabul, Afghanistan
+        </li>
       </ul>
     </section>
     <footer>
