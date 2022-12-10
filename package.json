@@ -1,0 +1,19 @@
+{
+  "name": "awesome-books",
+  "version": "1.0.0",
+  "description": "Books Library with collection of Books, have Crud functions and simple design",
+  "main": "index.html",
+  "scripts": {
+    "test": "test "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rana-Mudassir/Awesome-books.git"
+  },
+  "author": "Mudassir & Suliman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rana-Mudassir/Awesome-books/issues"
+  },
+  "homepage": "https://github.com/Rana-Mudassir/Awesome-books#readme"
+}
