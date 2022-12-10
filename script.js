@@ -18,7 +18,7 @@ class bookApp {
     localStorage.setItem('booksArray', JSON.stringify(booksArray));
   }
 }
-/* eslint-enable  */ 
+/* eslint-enable  */
 
 // Local Storage
 window.onload = () => {
