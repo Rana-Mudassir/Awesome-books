@@ -44,13 +44,6 @@ div#bookSection > div:nth-of-type(odd) {
   background-color: #ddd;
 }
 
-/* .formInput{
-	display: flex;
-	width: 30%;
-	display: flex;
-	justify-content: center;
-} */
-
 .form {
   display: flex;
   flex-direction: column;
