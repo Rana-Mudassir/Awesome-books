@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Awesome Books</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1 id="heading">All awesome Books</h1>
+    </div>
+    <div id="bookSection"></div>
+    <div>
+      <hr style="margin-bottom: 16px; border: 1px solid black; color: black;" />
+      <h3 id="heading">Add a new book</h3>
+    </div>
+    <div>
+      <form action="" class="form">
+        <div class="formInput">
+          <input
+            type="text"
+            placeholder="Title"
+            id="inputTitle"
+            value=""
+            style="width: 100%; margin-top: 10px;"
+      />
+        </div>
+        <div class="formInput">
+          <input
+            type="text"
+            placeholder="Author"
+            id="inputAuthor"
+            value=""
+            style="width: 100%; margin-top: 10px;"
+          />
+        </div>
+        <div>
+          <input type="button" id="add" value="Add" />
+        </div>
+        <!-- <button id="add" onclick="addBook()">Add</button> -->
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
